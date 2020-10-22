@@ -23,6 +23,22 @@ const (
 const x = iota
 const y = iota
 
+const (
+	A = iota
+	C
+	T
+	G
+)
+
+type Base int
+
+const (
+	AA Base = iota
+	CC
+	TT
+	GG
+)
+
 // https://stackoverflow.com/questions/14426366/what-is-an-idiomatic-way-of-representing-enums-in-go
 func main() {
 	fmt.Println(c0) // 0
@@ -39,4 +55,14 @@ func main() {
 
 	fmt.Println(x) // 0
 	fmt.Println(y) // 0
+
+	fmt.Println(A) // 0
+	fmt.Println(C) // 1
+	fmt.Println(T) // 2
+	fmt.Println(G) // 3
+
+	fmt.Println(AA) // 0
+	fmt.Println(CC) // 1
+	fmt.Println(TT) // 2
+	fmt.Println(GG) // 3
 }
